@@ -116,7 +116,3 @@ docker compose ps
 docker compose logs -f
 docker compose down
 ```
-
-## 8. Better Option For Class
-
-Use MySQL container first, run Spring Boot app locally, then explain Docker Compose later for container-to-container communication.
