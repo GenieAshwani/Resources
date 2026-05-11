@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodeForSuccess — Java Market Report 2026</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+  :root {
+    --bg:        #0f1117;
+    --bg2:       #161b27;
+    --bg3:       #1e2535;
+    --border:    rgba(255,255,255,0.08);
+    --border2:   rgba(255,255,255,0.14);
+    --text:      #f0f2f8;
+    --text2:     #9ba5be;
+    --text3:     #5a6480;
+    --green:     #2ecc71;
+    --green-bg:  rgba(46,204,113,0.12);
+    --green-dk:  #1a7a43;
+    --red:       #e74c3c;
+    --red-bg:    rgba(231,76,60,0.12);
+    --red-dk:    #8b2020;
+    --amber:     #f39c12;
+    --amber-bg:  rgba(243,156,18,0.12);
+    --amber-dk:  #8a5500;
+    --blue:      #3498db;
+    --blue-bg:   rgba(52,152,219,0.12);
+    --radius:    10px;
+    --radius-lg: 14px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 32px 80px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--bg2);
+    border: 1px solid var(--border2);
+    border-radius: var(--radius-lg);
+    padding: 40px 40px 32px;
+    margin-bottom: 36px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    background: rgba(46,204,113,0.06);
+  }
+  .hero-badge {
+    display: inline-block;
+    font-size: 11px; font-weight: 600;
+    letter-spacing: .07em; text-transform: uppercase;
+    padding: 4px 14px; border-radius: 20px;
+    background: var(--green-bg); color: var(--green);
+    margin-bottom: 18px;
+  }
+  .hero-h1 {
+    font-size: 36px; font-weight: 600;
+    line-height: 1.2; margin-bottom: 12px;
+    color: var(--text);
+  }
+  .hero-h1 em { font-style: normal; color: var(--red); }
+  .hero-sub {
+    font-size: 15px; color: var(--text2);
+    line-height: 1.65; max-width: 560px; margin-bottom: 28px;
+  }
+  .hero-stats {
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 14px;
+  }
+  .hstat {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+  }
+  .hstat-num { font-size: 26px; font-weight: 600; line-height: 1; margin-bottom: 6px; }
+  .hstat-lbl { font-size: 12px; color: var(--text2); line-height: 1.4; }
+
+  /* ── SECTION ── */
+  .sec { margin-bottom: 36px; }
+  .sec-head {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 16px; font-weight: 600; color: var(--text);
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 16px;
+  }
+  .sec-head .icon { font-size: 18px; opacity: .7; }
+
+  /* ── STAT CARDS ── */
+  .grid3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+  .kcard {
+    background: var(--bg2);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    border-left: 3px solid transparent;
+  }
+  .kcard.green { border-left-color: var(--green); }
+  .kcard.red   { border-left-color: var(--red); }
+  .kcard-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; gap: 6px; }
+  .kcard-num { font-size: 24px; font-weight: 600; line-height: 1; }
+  .kcard-num.green { color: var(--green); }
+  .kcard-num.red   { color: var(--red); }
+  .pill { font-size: 10px; font-weight: 600; padding: 3px 9px; border-radius: 20px; white-space: nowrap; }
+  .pill-green { background: var(--green-bg); color: var(--green); }
+  .pill-red   { background: var(--red-bg);   color: var(--red); }
+  .pill-amber { background: var(--amber-bg); color: var(--amber); }
+  .pill-blue  { background: var(--blue-bg);  color: var(--blue); }
+  .kcard-lbl  { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 4px; }
+  .kcard-note { font-size: 12px; color: var(--text2); line-height: 1.4; }
+
+  .insight {
+    background: var(--green-bg);
+    border: 1px solid rgba(46,204,113,0.2);
+    border-radius: var(--radius);
+    padding: 16px 20px; margin-top: 14px;
+  }
+  .insight-title { font-size: 13px; font-weight: 600; color: var(--green); margin-bottom: 6px; }
+  .insight-body  { font-size: 13px; color: rgba(46,204,113,.8); line-height: 1.65; }
+
+  /* ── SALARY CARDS ── */
+  .sal-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-bottom: 20px; }
+  .sal-card {
+    background: var(--bg2); border-radius: var(--radius);
+    padding: 18px 20px; text-align: center;
+    border-top: 3px solid transparent;
+  }
+  .sal-card.entry  { border-top-color: var(--blue); }
+  .sal-card.mid    { border-top-color: var(--green); }
+  .sal-card.senior { border-top-color: var(--amber); }
+  .sal-label { font-size: 11px; color: var(--text2); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 10px; }
+  .sal-range { font-size: 22px; font-weight: 600; margin-bottom: 6px; }
+  .sal-range.entry  { color: var(--blue); }
+  .sal-range.mid    { color: var(--green); }
+  .sal-range.senior { color: var(--amber); }
+  .sal-sub { font-size: 11px; color: var(--text3); }
+
+  /* ── EVIDENCE GRID ── */
+  .ev-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .ev-item {
+    background: var(--bg2); border-radius: var(--radius);
+    padding: 14px 16px;
+    border-left: 3px solid var(--green);
+  }
+  .ev-tag { font-size: 11px; font-weight: 600; color: var(--green); margin-bottom: 6px; text-transform: uppercase; letter-spacing: .04em; }
+  .ev-txt { font-size: 13px; color: var(--text2); line-height: 1.5; }
+
+  /* ── REASONS ── */
+  .note-banner {
+    background: var(--amber-bg);
+    border: 1px solid rgba(243,156,18,.2);
+    border-radius: var(--radius);
+    padding: 14px 18px; margin-bottom: 14px;
+    font-size: 13px; color: var(--amber); line-height: 1.6;
+  }
+  .reason {
+    background: var(--bg2); border-radius: var(--radius);
+    padding: 18px 20px; margin-bottom: 10px;
+    display: flex; gap: 16px; align-items: flex-start;
+  }
+  .rnum {
+    width: 40px; height: 40px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px; font-weight: 600; flex-shrink: 0;
+  }
+  .rnum.red   { background: var(--red-bg);   color: var(--red); }
+  .rnum.amber { background: var(--amber-bg); color: var(--amber); }
+  .r-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 5px; }
+  .r-stat  { font-size: 13px; font-weight: 500; margin-bottom: 6px; }
+  .r-stat.red   { color: var(--red); }
+  .r-stat.amber { color: var(--amber); }
+  .r-body { font-size: 13px; color: var(--text2); line-height: 1.6; }
+  .r-src  { font-size: 11px; color: var(--text3); margin-top: 8px; }
+
+  /* ── AI SECTION ── */
+  .ai-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 14px; }
+  .ai-stats { display: flex; flex-direction: column; gap: 10px; }
+  .aistat {
+    background: var(--bg2); border-radius: var(--radius);
+    padding: 12px 16px; display: flex; align-items: center; gap: 14px;
+  }
+  .aistat-num { font-size: 20px; font-weight: 600; min-width: 68px; }
+  .aistat-num.red   { color: var(--red); }
+  .aistat-num.green { color: var(--green); }
+  .aistat-num.amber { color: var(--amber); }
+  .aistat-lbl { font-size: 12px; color: var(--text2); line-height: 1.45; }
+  .callout3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+  .cb { border-radius: var(--radius); padding: 14px 16px; }
+  .cb-amber   { background: var(--amber-bg); border: 1px solid rgba(243,156,18,.2); }
+  .cb-info    { background: var(--blue-bg);  border: 1px solid rgba(52,152,219,.2); }
+  .cb-success { background: var(--green-bg); border: 1px solid rgba(46,204,113,.2); }
+  .cb-title { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 8px; }
+  .cb-amber   .cb-title { color: var(--amber); }
+  .cb-info    .cb-title { color: var(--blue); }
+  .cb-success .cb-title { color: var(--green); }
+  .cb-body { font-size: 12px; line-height: 1.55; }
+  .cb-amber   .cb-body { color: rgba(243,156,18,.85); }
+  .cb-info    .cb-body { color: rgba(52,152,219,.85); }
+  .cb-success .cb-body { color: rgba(46,204,113,.85); }
+
+  /* ── SKILLS ── */
+  .sk-wrap {
+    background: var(--bg2); border-radius: var(--radius-lg);
+    border: 1px solid var(--border); padding: 8px 20px;
+  }
+  .sk-row {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 12px 0; border-bottom: 1px solid var(--border);
+  }
+  .sk-row:last-child { border-bottom: none; }
+  .sk-name { font-size: 13px; font-weight: 500; color: var(--text); flex: 0 0 200px; line-height: 1.5; }
+  .sk-why  { font-size: 13px; color: var(--text2); line-height: 1.5; flex: 1; }
+
+  /* ── VERDICT ── */
+  .verdict-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-top: 14px; }
+  .vcard { border-radius: var(--radius); padding: 18px 20px; }
+  .vcard.v-green { background: var(--green-bg); border: 1px solid rgba(46,204,113,.2); }
+  .vcard.v-red   { background: var(--red-bg);   border: 1px solid rgba(231,76,60,.2); }
+  .vcard.v-info  { background: var(--blue-bg);  border: 1px solid rgba(52,152,219,.2); }
+  .vcard-title { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+  .vcard.v-green .vcard-title { color: var(--green); }
+  .vcard.v-red   .vcard-title { color: var(--red); }
+  .vcard.v-info  .vcard-title { color: var(--blue); }
+  .vcard-body { font-size: 13px; line-height: 1.6; }
+  .vcard.v-green .vcard-body { color: rgba(46,204,113,.8); }
+  .vcard.v-red   .vcard-body { color: rgba(231,76,60,.8); }
+  .vcard.v-info  .vcard-body { color: rgba(52,152,219,.8); }
+
+  /* ── MISC ── */
+  .leg { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--text2); margin-bottom: 12px; }
+  .leg span { display: flex; align-items: center; gap: 6px; }
+  .lsq { width: 11px; height: 11px; border-radius: 3px; flex-shrink: 0; }
+  .chart-wrap { position: relative; width: 100%; height: 280px; }
+  .src-note { font-size: 11px; color: var(--text3); margin-top: 10px; line-height: 1.5; }
+  .divider { height: 1px; background: var(--border); margin: 12px 0; }
+
+  /* ── BRAND NAV ── */
+  .navbar {
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border2);
+    padding: 0 32px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 56px;
+    position: sticky; top: 0; z-index: 100;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none;
+  }
+  .brand-logo {
+    width: 34px; height: 34px; border-radius: 8px;
+    background: linear-gradient(135deg, #2ecc71 0%, #1a9a52 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px; font-weight: 700; color: #fff;
+    letter-spacing: -1px; flex-shrink: 0;
+  }
+  .brand-name {
+    font-size: 17px; font-weight: 700; color: var(--text);
+    letter-spacing: -.3px;
+  }
+  .brand-name span { color: var(--green); }
+  .nav-tag {
+    font-size: 11px; font-weight: 600;
+    padding: 4px 12px; border-radius: 20px;
+    background: var(--green-bg); color: var(--green);
+    letter-spacing: .04em;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    padding: 32px;
+    margin-top: 20px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 20px; flex-wrap: wrap;
+  }
+  .footer-brand { display: flex; align-items: center; gap: 10px; }
+  .footer-brand-name { font-size: 16px; font-weight: 700; color: var(--text); }
+  .footer-brand-name span { color: var(--green); }
+  .footer-copy { font-size: 12px; color: var(--text3); margin-top: 3px; }
+  .footer-right { text-align: right; }
+  .footer-right p { font-size: 12px; color: var(--text3); line-height: 1.6; }
+  .footer-right strong { color: var(--text2); }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="brand" href="#">
+    <div class="brand-logo">C</div>
+    <div class="brand-name">Code<span>For</span>Success</div>
+  </a>
+  <span class="nav-tag">Java Market Report · 2026</span>
+</nav>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:18px; flex-wrap:wrap; gap:10px;">
+      <div class="hero-badge">Research Report · May 2026</div>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <div style="width:26px;height:26px;border-radius:6px;background:linear-gradient(135deg,#2ecc71,#1a9a52);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;">C</div>
+        <span style="font-size:13px;font-weight:700;color:var(--text2);">Code<span style="color:var(--green);">For</span>Success</span>
+      </div>
+    </div>
+    <h1 class="hero-h1">Java is <em>not</em> the problem.<br>The market is.</h1>
+    <p class="hero-sub">Data-backed proof for students struggling to get callbacks — showing why Java remains strong while the overall entry-level hiring market is at its worst since the pandemic.</p>
+    <div class="hero-stats">
+      <div class="hstat"><div class="hstat-num" style="color:var(--green)">9M+</div><div class="hstat-lbl">Java developers globally — top 5 language in 2026</div></div>
+      <div class="hstat"><div class="hstat-num" style="color:var(--red)">128K+</div><div class="hstat-lbl">Tech jobs lost in 2026 so far — 1,002 per day</div></div>
+      <div class="hstat"><div class="hstat-num" style="color:var(--amber)">5.6%</div><div class="hstat-lbl">Graduate unemployment — highest in 3 years</div></div>
+    </div>
+  </div>
+
+  <!-- KEY NUMBERS -->
+  <div class="sec">
+    <div class="sec-head"><span class="icon">📊</span> The numbers — what's strong vs. what's broken</div>
+    <div class="grid3">
+      <div class="kcard green"><div class="kcard-top"><span class="kcard-num green">9M+</span><span class="pill pill-green">Java strong</span></div><div class="kcard-lbl">Java developers globally</div><div class="kcard-note">Top 5 most used language worldwide in 2026</div></div>
+      <div class="kcard green"><div class="kcard-top"><span class="kcard-num green">30%</span><span class="pill pill-green">Java strong</span></div><div class="kcard-lbl">Growth in Java job openings YoY</div><div class="kcard-note">Full-stack Java demand rising — microservices &amp; cloud</div></div>
+      <div class="kcard green"><div class="kcard-top"><span class="kcard-num green">₹10L+</span><span class="pill pill-green">Java strong</span></div><div class="kcard-lbl">Avg mid-level Java salary India (2026)</div><div class="kcard-note">Senior roles at ₹25–50L LPA and still growing</div></div>
+      <div class="kcard red"><div class="kcard-top"><span class="kcard-num red">128K+</span><span class="pill pill-red">Market problem</span></div><div class="kcard-lbl">Tech jobs lost in 2026 YTD</div><div class="kcard-note">~1,002 people per day losing jobs in tech</div></div>
+      <div class="kcard red"><div class="kcard-top"><span class="kcard-num red">−16%</span><span class="pill pill-red">Market problem</span></div><div class="kcard-lbl">Drop in entry-level job postings YoY</div><div class="kcard-note">Applications per job spiked +26% simultaneously</div></div>
+      <div class="kcard red"><div class="kcard-top"><span class="kcard-num red">5.6%</span><span class="pill pill-red">Market problem</span></div><div class="kcard-lbl">Graduate unemployment (22–27 yr olds)</div><div class="kcard-note">Highest in 3 years — worst since pandemic</div></div>
+    </div>
+    <div class="insight">
+      <div class="insight-title">Key insight</div>
+      <div class="insight-body">Salaries only rise when demand exceeds supply. Java senior developer salaries are growing year over year in India and globally. If Java was dying, salaries would be falling. They are not. The language is healthy. The market is the issue.</div>
+    </div>
+  </div>
+
+  <!-- SALARY -->
+  <div class="sec">
+    <div class="sec-head"><span class="icon">📈</span> Java developer salary ranges — India 2026 (₹ LPA)</div>
+    <div class="sal-cards">
+      <div class="sal-card entry"><div class="sal-label">Entry level · 0–2 yrs</div><div class="sal-range entry">₹3.5L – ₹8L</div><div class="sal-sub">LPA · Fresher roles</div></div>
+      <div class="sal-card mid"><div class="sal-label">Mid level · 3–5 yrs</div><div class="sal-range mid">₹10L – ₹25L</div><div class="sal-sub">LPA · Spring Boot + Cloud</div></div>
+      <div class="sal-card senior"><div class="sal-label">Senior · 6+ yrs</div><div class="sal-range senior">₹25L – ₹50L+</div><div class="sal-sub">LPA · Architect + AI roles</div></div>
+    </div>
+    <div class="leg">
+      <span><span class="lsq" style="background:#3498db"></span>Entry (₹ LPA)</span>
+      <span><span class="lsq" style="background:#2ecc71"></span>Mid (₹ LPA)</span>
+      <span><span class="lsq" style="background:#f39c12"></span>Senior (₹ LPA)</span>
+    </div>
+    <div class="chart-wrap"><canvas id="salChart" role="img" aria-label="Java salary bar chart in LPA India 2026">Entry ₹3.5–8L, Mid ₹10–25L, Senior ₹25–50L LPA.</canvas></div>
+    <p class="src-note">Sources: Glassdoor India 2026 · Naukri salary data · AmbitionBox · Motion Recruitment India estimates</p>
+  </div>
+
+  <!-- JAVA STRONG -->
+  <div class="sec">
+    <div class="sec-head"><span class="icon">✅</span> Java is strong — the evidence</div>
+    <div class="ev-grid">
+      <div class="ev-item"><div class="ev-tag">Top 5 globally</div><div class="ev-txt">9M+ Java developers worldwide. Consistently top 5 most used language — used in more enterprises than any other language including Python.</div></div>
+      <div class="ev-item"><div class="ev-tag">30% job growth</div><div class="ev-txt">Full-stack Java openings grew 30% YoY driven by cloud-native microservices, fintech, banking, and healthcare system modernisation.</div></div>
+      <div class="ev-item"><div class="ev-tag">21,000 new jobs by 2028</div><div class="ev-txt">13% projected growth in Java roles 2018–2028. Companies like Infosys, TCS, Wipro and product companies still run Java at their core.</div></div>
+      <div class="ev-item"><div class="ev-tag">₹40L+ for cloud Java devs</div><div class="ev-txt">Java + Spring Boot + Cloud + AWS = ₹40–60L+ at product companies in India. AI integration skills push salaries even higher.</div></div>
+      <div class="ev-item"><div class="ev-tag">Decades of enterprise lock-in</div><div class="ev-txt">Every major Indian bank, insurance company, and government system runs on Java. These will NOT be rewritten anytime soon — decades of work ahead.</div></div>
+      <div class="ev-item"><div class="ev-tag">Java 21 + Spring AI (2025)</div><div class="ev-txt">Virtual threads, GraalVM, Spring AI, LangChain4j. Java is evolving INTO the AI era — not being replaced by it.</div></div>
+    </div>
+  </div>
+
+  <!-- 5 REASONS -->
+  <div class="sec">
+    <div class="sec-head"><span class="icon">⚠️</span> The 5 real reasons students aren't getting calls</div>
+    <div class="note-banner">None of these 5 reasons have anything to do with Java as a language. They are pure market conditions beyond any individual student's control.</div>
+    <div class="reason"><div class="rnum red">01</div><div><div class="r-title">Frozen job market — nobody is quitting</div><div class="r-stat red">Global quit rate: 3% (2022) → 2% (2025) — historic low</div><div class="r-body">Entry-level slots only open when senior staff leaves. With employees too nervous to switch jobs ("labor market lock-in"), there are barely any new vacancies — regardless of your language or skills. In India, job-hopping slowed significantly post-2023.</div><div class="r-src">Fortune Jun 2025 · Federal Reserve St. Louis</div></div></div>
+    <div class="reason"><div class="rnum red">02</div><div><div class="r-title">"Entry-level" now secretly requires 3–5 years experience</div><div class="r-stat red">Jobs needing ≤3 yrs experience: 43% (2018) → 28% (2024)</div><div class="r-body">Companies did not stop hiring — they stopped hiring freshers. They skip graduates entirely and hire experienced candidates who need zero training budget. This affects all freshers in all tech languages, not just Java students.</div><div class="r-src">Burning Glass Institute · Forrester Research 2025</div></div></div>
+    <div class="reason"><div class="rnum red">03</div><div><div class="r-title">Laid-off senior engineers flooded the market</div><div class="r-stat red">245,953 tech workers laid off globally in 2025 · TCS cut 12,000 roles</div><div class="r-body">TCS, Infosys, Wipro, and global tech companies pushed thousands of experienced Java engineers back into job search. Freshers now directly compete with developers who have 5–10 years of real production experience for the same roles.</div><div class="r-src">trueup.io 2025 · Extern.com CS Jobs 2026</div></div></div>
+    <div class="reason"><div class="rnum amber">04</div><div><div class="r-title">Skills gap — college curriculum hasn't caught up to the market</div><div class="r-stat amber">58% of hiring managers say fresh graduates are not work-ready</div><div class="r-body">Companies want Spring Boot + Microservices + Docker + Cloud + REST APIs. Most students graduate with core Java only. This gap is the ONLY reason on this list that students can actually fix themselves.</div><div class="r-src">Intelligent / Inc. Magazine 2025 · NACE Survey 2026</div></div></div>
+    <div class="reason"><div class="rnum amber">05</div><div><div class="r-title">Economic uncertainty froze hiring across all industries</div><div class="r-stat amber">42% of businesses pulling back on hiring due to global uncertainty</div><div class="r-body">Companies in wait-and-see mode defer entry-level hires first. This affects ALL fresh graduates in ALL fields globally — law, accounting, engineering. The Federal Reserve NY calls this "the most challenging grad market in a decade."</div><div class="r-src">Vistage / WSJ May 2025 · NPR Jul 2025 · Federal Reserve NY</div></div></div>
+  </div>
+
+  <!-- AI -->
+  <div class="sec">
+    <div class="sec-head"><span class="icon">🤖</span> What about AI taking Java jobs?</div>
+    <div class="ai-row">
+      <div>
+        <div class="leg"><span><span class="lsq" style="background:#e74c3c"></span>High risk</span><span><span class="lsq" style="background:#f39c12"></span>Medium</span><span><span class="lsq" style="background:#3498db"></span>Low</span><span><span class="lsq" style="background:#2ecc71"></span>Very low</span></div>
+        <div class="chart-wrap"><canvas id="aiChart" role="img" aria-label="AI displacement risk chart">Customer support 85, Marketing 75, HR 65, Junior coding 40, Senior Java 12.</canvas></div>
+      </div>
+      <div class="ai-stats">
+        <div class="aistat"><span class="aistat-num red">20.4%</span><span class="aistat-lbl">Of 2026 layoffs explicitly cite AI as the cause</span></div>
+        <div class="aistat"><span class="aistat-num green">79.6%</span><span class="aistat-lbl">Of layoffs — nothing to do with AI at all</span></div>
+        <div class="aistat"><span class="aistat-num amber">55%</span><span class="aistat-lbl">Employers already regretting their AI layoffs</span></div>
+        <div class="aistat"><span class="aistat-num amber">~50%</span><span class="aistat-lbl">AI layoffs predicted to be quietly rehired — Forrester 2026</span></div>
+        <div class="aistat"><span class="aistat-num red">16%</span><span class="aistat-lbl">Workers globally with actual AI readiness — very low</span></div>
+        <div class="aistat"><span class="aistat-num green">₹40L+</span><span class="aistat-lbl">Java devs integrating AI tools — their salary in India</span></div>
+      </div>
+    </div>
+    <div class="callout3">
+      <div class="cb cb-amber"><div class="cb-title">Klarna story</div><div class="cb-body">Klarna replaced 700 employees with AI. Quality declined, customers revolted — they had to rehire humans. AI overcorrection is real and already reversing.</div></div>
+      <div class="cb cb-info"><div class="cb-title">Forrester 2026 predicts</div><div class="cb-body">Half of all AI-attributed layoffs will be quietly rehired within 2 years. Companies are betting on capabilities that don't yet exist at production scale.</div></div>
+      <div class="cb cb-success"><div class="cb-title">Java + AI = premium</div><div class="cb-body">Spring AI and LangChain4j let Java devs build LLM-powered apps. Integrating AI into Java systems = ₹40–60L+ salaries in India in 2026.</div></div>
+    </div>
+  </div>
+
+  <!-- MARKET CHART -->
+  <div class="sec">
+    <div class="sec-head"><span class="icon">📉</span> Entry-level market: postings falling, competition rising</div>
+    <div class="leg">
+      <span><span class="lsq" style="background:#e74c3c"></span>Job postings index (falling)</span>
+      <span><span class="lsq" style="background:#3498db;border:2px dashed #3498db;background:transparent"></span>Applications per job (rising)</span>
+    </div>
+    <div class="chart-wrap"><canvas id="mktChart" role="img" aria-label="Line chart job postings vs applications trend 2022 to 2026">Job postings fell from 100 to 72. Applications per job rose from 100 to 148.</canvas></div>
+    <p class="src-note">Sources: Federal Reserve Bank of New York · NACE Employer Survey 2026 · Entrepreneur.com Mar 2026</p>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="sec">
+    <div class="sec-head"><span class="icon">🎓</span> What students must do — the only solvable part</div>
+    <div class="sk-wrap">
+      <div class="sk-row"><div class="sk-name"><span class="pill pill-red" style="margin-right:8px;display:inline-block;margin-bottom:6px">must have</span><br>Core Java + OOP + DSA</div><div class="sk-why">Every Java interview starts here. Without solid fundamentals, no recruiter will shortlist you. This is the gating filter — not negotiable.</div></div>
+      <div class="sk-row"><div class="sk-name"><span class="pill pill-red" style="margin-right:8px;display:inline-block;margin-bottom:6px">must have</span><br>Spring Boot + REST APIs</div><div class="sk-why">99% of Java job descriptions include Spring Boot. It is the industry standard. Without this, your resume gets filtered before a human even sees it.</div></div>
+      <div class="sk-row"><div class="sk-name"><span class="pill pill-red" style="margin-right:8px;display:inline-block;margin-bottom:6px">must have</span><br>Git + real GitHub portfolio</div><div class="sk-why">Recruiters check GitHub before calling. Zero portfolio = zero callbacks. Build 2–3 real Spring Boot projects — not tutorial clones.</div></div>
+      <div class="sk-row"><div class="sk-name"><span class="pill pill-red" style="margin-right:8px;display:inline-block;margin-bottom:6px">must have</span><br>SQL + Hibernate / JPA</div><div class="sk-why">All Java backend roles involve databases. Recruiters assume you know this — it is the baseline, not a differentiator.</div></div>
+      <div class="sk-row"><div class="sk-name"><span class="pill pill-amber" style="margin-right:8px;display:inline-block;margin-bottom:6px">high priority</span><br>Microservices + Docker</div><div class="sk-why">Full-stack Java openings grew 30% YoY. Every one of them uses microservices. Docker is now as expected as knowing how to write a class.</div></div>
+      <div class="sk-row"><div class="sk-name"><span class="pill pill-amber" style="margin-right:8px;display:inline-block;margin-bottom:6px">high priority</span><br>AWS or Azure basics</div><div class="sk-why">Java + Cloud = ₹15–20L extra in annual salary. Cloud is the default deployment environment in 2026. Basic EC2, S3, RDS knowledge changes everything.</div></div>
+      <div class="sk-row"><div class="sk-name"><span class="pill pill-amber" style="margin-right:8px;display:inline-block;margin-bottom:6px">high priority</span><br>AI tools (Copilot, ChatGPT)</div><div class="sk-why">Developers using AI tools are 25–50% more productive. Companies actively screen for this now. Use AI as a weapon, not something to fear.</div></div>
+      <div class="sk-row"><div class="sk-name"><span class="pill pill-blue" style="margin-right:8px;display:inline-block;margin-bottom:6px">differentiator</span><br>Spring AI / LangChain4j</div><div class="sk-why">New in 2025. Java devs who integrate LLMs are rare in India. They command ₹40–60L+. Learn this now before everyone else does.</div></div>
+    </div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="sec">
+    <div class="sec-head"><span class="icon">⚖️</span> The verdict</div>
+    <div class="verdict-row">
+      <div class="vcard v-green"><div class="vcard-title">✓ Java is strong</div><div class="vcard-body">9M developers globally. Top 5 language. Salaries growing. 30% more openings. Spring AI making it future-proof. Senior roles at ₹25–50L in India.</div></div>
+      <div class="vcard v-red"><div class="vcard-title">✗ The market is hard</div><div class="vcard-body">128K+ jobs lost in 2026. 5.6% grad unemployment — 3yr high. Entry postings down 16%. TCS cut 12,000. A market cycle, not a Java problem.</div></div>
+      <div class="vcard v-info"><div class="vcard-title">→ The path forward</div><div class="vcard-body">Spring Boot + Cloud + real GitHub projects = moving from "no callback" pile to the shortlist. Skill up now. The cycle will correct. Be ready.</div></div>
+    </div>
+    <p class="src-note" style="margin-top:20px">Sources: Federal Reserve NY · Motion Recruitment 2026 · Forrester Research · Burning Glass Institute · trueup.io · programs.com · HBR Jan 2026 · NPR Jul 2025 · Fortune Jun 2025 · BSWEN Java Market 2026 · OPTnation · Extern.com · NACE Survey 2026 · Entrepreneur.com Mar 2026 · Glassdoor India · AmbitionBox · Naukri salary data 2026</p>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-brand">
+    <div style="width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#2ecc71,#1a9a52);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:#fff;flex-shrink:0;">C</div>
+    <div>
+      <div class="footer-brand-name">Code<span>For</span>Success</div>
+      <div class="footer-copy">Empowering developers with knowledge &amp; skills · 2026</div>
+    </div>
+  </div>
+  <div class="footer-right">
+    <p><strong>Sources:</strong> Federal Reserve NY · Motion Recruitment 2026 · Forrester Research</p>
+    <p>Burning Glass Institute · trueup.io · HBR Jan 2026 · NACE Survey 2026</p>
+    <p>Glassdoor India · AmbitionBox · Naukri salary data 2026</p>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('load', function() {
+  var dk = true;
+  var tc = 'rgba(255,255,255,0.45)';
+  var gc = 'rgba(255,255,255,0.07)';
+  var base = { responsive:true, maintainAspectRatio:false, plugins:{ legend:{ display:false } } };
+
+  new Chart(document.getElementById('salChart'), {
+    type:'bar',
+    data:{
+      labels:['Entry level (0–2 yrs)','Mid level (3–5 yrs)','Senior (6+ yrs)'],
+      datasets:[
+        { label:'Min (₹ LPA)', data:[3.5,10,25], backgroundColor:'#3498db', borderRadius:6, barPercentage:.42 },
+        { label:'Max (₹ LPA)', data:[8,25,50],   backgroundColor:'#2ecc71', borderRadius:6, barPercentage:.42 }
+      ]
+    },
+    options:{ ...base,
+      scales:{
+        x:{ ticks:{ color:tc, font:{size:13} }, grid:{ color:gc } },
+        y:{ ticks:{ color:tc, font:{size:12}, callback:function(v){ return '₹'+v+'L'; } }, grid:{ color:gc }, min:0, max:60,
+            title:{ display:true, text:'Lakhs Per Annum (LPA)', color:tc, font:{size:11} } }
+      },
+      plugins:{ legend:{ display:false }, tooltip:{ callbacks:{ label:function(ctx){ return ' ₹'+ctx.raw+'L LPA'; } } } }
+    }
+  });
+
+  new Chart(document.getElementById('aiChart'), {
+    type:'bar',
+    data:{
+      labels:['Customer support','Content & marketing','HR & admin','Junior coding tasks','Senior Java dev'],
+      datasets:[{ label:'AI risk', data:[85,75,65,40,12],
+        backgroundColor:['#e74c3c','#f39c12','#f39c12','#3498db','#2ecc71'],
+        borderRadius:5, barPercentage:.55 }]
+    },
+    options:{ ...base, indexAxis:'y',
+      scales:{
+        x:{ ticks:{ color:tc, font:{size:12}, callback:function(v){ return v+'/100'; } }, grid:{ color:gc }, min:0, max:115 },
+        y:{ ticks:{ color:tc, font:{size:13} }, grid:{ color:gc } }
+      },
+      plugins:{ legend:{ display:false }, tooltip:{ callbacks:{ label:function(ctx){ return ' Risk: '+ctx.raw+'/100'; } } } }
+    }
+  });
+
+  new Chart(document.getElementById('mktChart'), {
+    type:'line',
+    data:{
+      labels:['2022','2023','2024','2025','2026 (YTD)'],
+      datasets:[
+        { label:'Job postings index', data:[100,94,86,78,72],
+          borderColor:'#e74c3c', backgroundColor:'rgba(231,76,60,0.1)',
+          pointBackgroundColor:'#e74c3c', borderWidth:2.5, fill:true, tension:.35 },
+        { label:'Applications per job', data:[100,109,118,132,148],
+          borderColor:'#3498db', backgroundColor:'rgba(52,152,219,0.1)',
+          pointBackgroundColor:'#3498db', borderDash:[6,3], borderWidth:2.5, fill:true, tension:.35 }
+      ]
+    },
+    options:{ ...base,
+      scales:{
+        x:{ ticks:{ color:tc, font:{size:13} }, grid:{ color:gc } },
+        y:{ ticks:{ color:tc, font:{size:12} }, grid:{ color:gc }, min:55, max:160,
+            title:{ display:true, text:'Index (2022 = 100)', color:tc, font:{size:11} } }
+      },
+      plugins:{ legend:{ display:false }, tooltip:{ callbacks:{ label:function(ctx){ return ' '+ctx.dataset.label+': '+ctx.raw; } } } }
+    }
+  });
+});
+</script>
+</body>
+</html>
