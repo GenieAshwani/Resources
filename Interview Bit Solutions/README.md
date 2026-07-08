@@ -1,20 +1,20 @@
 
  # 🏆  The sequence for studying Data Structures and Algorithms :
 
-1️⃣  [Arrays](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Interview%20Bit%20Solutions/Arrays) \
-2️⃣  [Math](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Interview%20Bit%20Solutions/Math) \
-3️⃣  [String](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Interview%20Bit%20Solutions/String) \
-4️⃣  [Binary Search](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Interview%20Bit%20Solutions/Binary%20Search)\
-5️⃣  [Hashing](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Interview%20Bit%20Solutions/Hashing)\
-6️⃣  [Stack and Queue](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Interview%20Bit%20Solutions/Stacks%20And%20Queues)\
-7️⃣  [Two Pointers](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Interview%20Bit%20Solutions/Two%20Pointer) \
-8️⃣  [Heap or priority queue](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Interview%20Bit%20Solutions/Heaps%20and%20Maps) \
-1️⃣0️⃣ [Linked List](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Interview%20Bit%20Solutions/Linked%20List) \
-1️⃣1️⃣ [Tree](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Interview%20Bit%20Solutions/Tree%20Data%20Structure) \
-1️⃣2️⃣ [Backtracking](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Interview%20Bit%20Solutions/Backtracking) \
-1️⃣3️⃣ [Greedy](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Interview%20Bit%20Solutions/Greedy) \
-1️⃣4️⃣ [Dynamic programming](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Interview%20Bit%20Solutions/Dynamic%20Programming) \
-1️⃣5️⃣ [Graph](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Interview%20Bit%20Solutions/Graph) 
+1️⃣  [Arrays](https://github.com/GenieAshwani/Resources/tree/main/Interview%20Bit%20Solutions/Arrays) \
+2️⃣  [Math](https://github.com/GenieAshwani/Resources/tree/main/Interview%20Bit%20Solutions/Math) \
+3️⃣  [String](https://github.com/GenieAshwani/Resources/tree/main/Interview%20Bit%20Solutions/String) \
+4️⃣  [Binary Search](https://github.com/GenieAshwani/Resources/tree/main/Interview%20Bit%20Solutions/Binary%20Search)\
+5️⃣  [Hashing](https://github.com/GenieAshwani/Resources/tree/main/Interview%20Bit%20Solutions/Hashing)\
+6️⃣  [Stack and Queue](https://github.com/GenieAshwani/Resources/tree/main/Interview%20Bit%20Solutions/Stacks%20And%20Queues)\
+7️⃣  [Two Pointers](https://github.com/GenieAshwani/Resources/tree/main/Interview%20Bit%20Solutions/Two%20Pointer) \
+8️⃣  [Heap or priority queue](https://github.com/GenieAshwani/Resources/tree/main/Interview%20Bit%20Solutions/Heaps%20and%20Maps) \
+1️⃣0️⃣ [Linked List](https://github.com/GenieAshwani/Resources/tree/main/Interview%20Bit%20Solutions/Linked%20List) \
+1️⃣1️⃣ [Tree](https://github.com/GenieAshwani/Resources/tree/main/Interview%20Bit%20Solutions/Tree%20Data%20Structure) \
+1️⃣2️⃣ [Backtracking](https://github.com/GenieAshwani/Resources/tree/main/Interview%20Bit%20Solutions/Backtracking) \
+1️⃣3️⃣ [Greedy](https://github.com/GenieAshwani/Resources/tree/main/Interview%20Bit%20Solutions/Greedy) \
+1️⃣4️⃣ [Dynamic programming](https://github.com/GenieAshwani/Resources/tree/main/Interview%20Bit%20Solutions/Dynamic%20Programming) \
+1️⃣5️⃣ [Graph](https://github.com/GenieAshwani/Resources/tree/main/Interview%20Bit%20Solutions/Graph) 
     
 
  <br><br><br>
@@ -24,6 +24,10 @@
   <summary><b>Links</b></summary>
  
  
+### :star: Priority Channel
+ - **Genie Ashwani** - https://youtube.com/@genieashwani?si=Y3XcRb9accgk6QBN
+---
+
 ### Number Theory (Mathematics)
  - **CodeNCode** - https://www.youtube.com/watch?v=eRkqvQtm4DU&list=PL2q4fbVm1Ik4liHX78IRslXzUr8z5QxsG
 ---
@@ -50,6 +54,8 @@
 </details>
 
 # Complexities!
+[:star: LevelUp DSA Sheet](https://levelup.codeforsuccess.in/)
+
 [Sheet](https://www.bigocheatsheet.com/)
 ![image](https://user-images.githubusercontent.com/54531841/119622011-622abc00-be24-11eb-88d0-04061bc154fe.png)
 

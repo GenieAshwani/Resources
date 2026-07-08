@@ -1,8 +1,3 @@
-                         
-/* Fore More info Visit www.sumitsojha8.co */
-/* Made with love by Sumit Ojha */
-
-
 #include <bits/stdc++.h>
 using namespace std;
 

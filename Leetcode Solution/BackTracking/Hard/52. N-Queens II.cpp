@@ -1,4 +1,4 @@
-Same as N-Queens  : https://github.com/sumitsojha88/Placement-Preparation/blob/main/Leetcode%20Solution/BackTracking/Hard/51.%20N-Queens.cpp
+Same as N-Queens  : https://github.com/GenieAshwani/Resources/blob/main/Leetcode%20Solution/BackTracking/Hard/51.%20N-Queens.cpp
 
 
 Approach: Try all the possible positions for the queen.

@@ -1,24 +1,24 @@
  # 🏆  The sequence for studying Data Structures and Algorithms :
 
-1️⃣  [Arrays](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Leetcode%20Solution/Arrays) \
-2️⃣  [Matrix](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Leetcode%20Solution/Matrix) \
-3️⃣  [Math](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Leetcode%20Solution/Math) \
-4️⃣  [String](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Leetcode%20Solution/Strings) \
-5️⃣  [Binary Search](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Leetcode%20Solution/Binary%20Search)\
-6️⃣  [Sorting](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Leetcode%20Solution/Sort)\
-7️⃣  [Hashing](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Leetcode%20Solution/Greedy)\
-8️⃣  [Stack](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Leetcode%20Solution/Stack)\
-9️⃣  [Queue](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Leetcode%20Solution/Queue)\
-1️⃣0️⃣ [Two Pointers](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Leetcode%20Solution/Two%20Pointers) \
-1️⃣1️⃣ [Heap or priority queue](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Leetcode%20Solution/Heap) \
-1️⃣2️⃣ [Linked List](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Leetcode%20Solution/Linked%20list) \
-1️⃣3️⃣ [Recursion](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Leetcode%20Solution/Recursion)\
-1️⃣4️⃣ [Tree](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Leetcode%20Solution/Tree) \
-1️⃣5️⃣ [Backtracking](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Leetcode%20Solution/BackTracking) \
-1️⃣6️⃣ [Graph](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Leetcode%20Solution/Graph) \
-1️⃣7️⃣ [Greedy](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Leetcode%20Solution/Greedy) \
-1️⃣8️⃣ [Dynamic programming](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Leetcode%20Solution/Dynamic%20Programming) \
-1️⃣9️⃣ [Trie](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Leetcode%20Solution/Trie) \
+1️⃣  [Arrays](https://github.com/GenieAshwani/Resources/tree/main/Leetcode%20Solution/Arrays) \
+2️⃣  [Matrix](https://github.com/GenieAshwani/Resources/tree/main/Leetcode%20Solution/Matrix) \
+3️⃣  [Math](https://github.com/GenieAshwani/Resources/tree/main/Leetcode%20Solution/Math) \
+4️⃣  [String](https://github.com/GenieAshwani/Resources/tree/main/Leetcode%20Solution/Strings) \
+5️⃣  [Binary Search](https://github.com/GenieAshwani/Resources/tree/main/Leetcode%20Solution/Binary%20Search)\
+6️⃣  [Sorting](https://github.com/GenieAshwani/Resources/tree/main/Leetcode%20Solution/Sort)\
+7️⃣  [Hashing](https://github.com/GenieAshwani/Resources/tree/main/Leetcode%20Solution/Greedy)\
+8️⃣  [Stack](https://github.com/GenieAshwani/Resources/tree/main/Leetcode%20Solution/Stack)\
+9️⃣  [Queue](https://github.com/GenieAshwani/Resources/tree/main/Leetcode%20Solution/Queue)\
+1️⃣0️⃣ [Two Pointers](https://github.com/GenieAshwani/Resources/tree/main/Leetcode%20Solution/Two%20Pointers) \
+1️⃣1️⃣ [Heap or priority queue](https://github.com/GenieAshwani/Resources/tree/main/Leetcode%20Solution/Heap) \
+1️⃣2️⃣ [Linked List](https://github.com/GenieAshwani/Resources/tree/main/Leetcode%20Solution/Linked%20list) \
+1️⃣3️⃣ [Recursion](https://github.com/GenieAshwani/Resources/tree/main/Leetcode%20Solution/Recursion)\
+1️⃣4️⃣ [Tree](https://github.com/GenieAshwani/Resources/tree/main/Leetcode%20Solution/Tree) \
+1️⃣5️⃣ [Backtracking](https://github.com/GenieAshwani/Resources/tree/main/Leetcode%20Solution/BackTracking) \
+1️⃣6️⃣ [Graph](https://github.com/GenieAshwani/Resources/tree/main/Leetcode%20Solution/Graph) \
+1️⃣7️⃣ [Greedy](https://github.com/GenieAshwani/Resources/tree/main/Leetcode%20Solution/Greedy) \
+1️⃣8️⃣ [Dynamic programming](https://github.com/GenieAshwani/Resources/tree/main/Leetcode%20Solution/Dynamic%20Programming) \
+1️⃣9️⃣ [Trie](https://github.com/GenieAshwani/Resources/tree/main/Leetcode%20Solution/Trie) \
  <br><br><br>
 
 # Youtube Channels!
@@ -27,6 +27,10 @@
   <summary><b>Links</b></summary>
  
  
+### :star: Priority Channel
+ - **Genie Ashwani** - https://youtube.com/@genieashwani?si=Y3XcRb9accgk6QBN
+---
+
 ### Number Theory (Mathematics)
  - **CodeNCode** - https://www.youtube.com/watch?v=eRkqvQtm4DU&list=PL2q4fbVm1Ik4liHX78IRslXzUr8z5QxsG
 ---
@@ -53,6 +57,8 @@
 </details>
 
 # Complexities!
+[:star: LevelUp DSA Sheet](https://levelup.codeforsuccess.in/)
+
 [Sheet](https://www.bigocheatsheet.com/)
 ![image](https://user-images.githubusercontent.com/54531841/119622011-622abc00-be24-11eb-88d0-04061bc154fe.png)
 

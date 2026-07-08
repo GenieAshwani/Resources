@@ -1,4 +1,4 @@
- # :gift: Placement-Preparation- Complete Roadmap :gift:
+ # :gift: Resources - Complete Placement Roadmap :gift:
 
 <br>
 This repository consists of all the necessary Resources,questions and their solutions required for cracking the coding rounds and technical interviews at tech companies as well. And this content will surely help you to crack your dream company. This material has been taken and combined from various different sources.
@@ -14,7 +14,6 @@ It will be a complete roadmap for your placement prep.
 3. [Platforms for Training](#Platforms-for-training)
 4. [When contribute](#When-contribute)
 5. [How to contribute](#How-to-contribute)
-6. [Connect with me](#Connect-with-me)
 
 
 
@@ -22,17 +21,17 @@ It will be a complete roadmap for your placement prep.
 
 |Folder|Content|
 |-------|:-----------:|
-|Aptitude|[Resources and Practice Problems](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Aptitude)|
-|Computer Networks|[CN resources and interview preparation](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Computer%20Network%20Resources)|
-|DBMS|[DBMS resources and interview preparation](https://github.com/sumitsojha88/Placement-Preparation/tree/main/DBMS)|
-|Flutter|[Flutter resources for interview preparation](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Flutter%20Resources)|
-|Geeks For Geeks|[GfG coding solutions with Explanation](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Geeks%20For%20Geeks%20Solutions)|
-|InterviewBit|[Interview Bit solutions with Explanation ](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Interview%20Bit%20Solutions)|
-|Leetcode|[Leetcode solutions with Explanation](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Leetcode%20Solution)|
-|Operating System|[OS resources for interview preparation](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Operating%20System%20Resources)|
-|OOPS|[OOPS resources for interview preparation](https://github.com/sumitsojha88/Placement-Preparation/tree/main/OOPS%20Resources)|
-|SQL|[SQL resources for interview preparation](https://github.com/sumitsojha88/Placement-Preparation/tree/main/SQL%20Resources)|
-|System Design|[System design interview preparation](https://github.com/sumitsojha88/Placement-Preparation/tree/main/System%20Design%20Resources)|
+|Aptitude|[Resources and Practice Problems](https://github.com/GenieAshwani/Resources/tree/main/Aptitude)|
+|Computer Networks|[CN resources and interview preparation](https://github.com/GenieAshwani/Resources/tree/main/Computer%20Network%20Resources)|
+|DBMS|[DBMS resources and interview preparation](https://github.com/GenieAshwani/Resources/tree/main/DBMS)|
+|Flutter|[Flutter resources for interview preparation](https://github.com/GenieAshwani/Resources/tree/main/Flutter%20Resources)|
+|Geeks For Geeks|[GfG coding solutions with Explanation](https://github.com/GenieAshwani/Resources/tree/main/Geeks%20For%20Geeks%20Solutions)|
+|InterviewBit|[Interview Bit solutions with Explanation ](https://github.com/GenieAshwani/Resources/tree/main/Interview%20Bit%20Solutions)|
+|Leetcode|[Leetcode solutions with Explanation](https://github.com/GenieAshwani/Resources/tree/main/Leetcode%20Solution)|
+|Operating System|[OS resources for interview preparation](https://github.com/GenieAshwani/Resources/tree/main/Operating%20System%20Resources)|
+|OOPS|[OOPS resources for interview preparation](https://github.com/GenieAshwani/Resources/tree/main/OOPS%20Resources)|
+|SQL|[SQL resources for interview preparation](https://github.com/GenieAshwani/Resources/tree/main/SQL%20Resources)|
+|System Design|[System design interview preparation](https://github.com/GenieAshwani/Resources/tree/main/System%20Design%20Resources)|
 
 
 
@@ -77,7 +76,8 @@ It will be a complete roadmap for your placement prep.
   <summary style="font-size:1.15rem;">Data Structure and Algorithms</summary>
 
 - Without this, No Software Engineering Interview, in a tech giant can be cracked
-  - Follow this [DSA Crack Sheet List](https://github.com/sumitsojha88/Placement-Preparation/tree/main/DSA%20Preparation%20450)
+  - :star: Follow this [LevelUp DSA Sheet](https://levelup.codeforsuccess.in/)
+  - Follow this [DSA Crack Sheet List](https://github.com/GenieAshwani/Resources/tree/main/DSA%20Preparation%20450)
   - Time Required:  
     1️⃣ 2-3 months  
     2️⃣ 6-8 questions/day  
@@ -90,7 +90,7 @@ It will be a complete roadmap for your placement prep.
   
   * You need some projects to showcase your skills to your interviewer
     * Choices:   
-      1️⃣ [Mobile Development](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Flutter%20Resources)   
+      1️⃣ [Mobile Development](https://github.com/GenieAshwani/Resources/tree/main/Flutter%20Resources)   
       2️⃣ Web Development    
       3️⃣ Machine Leraning    
       4️⃣ Some other stuff (like, Blockchain, IOT, etc)   
@@ -102,11 +102,11 @@ It will be a complete roadmap for your placement prep.
   <summary style="font-size:1.15rem;">Subjectve Topics</summary>
   
   * Do a Subsequent reading, revision any day you get time    
-    1️⃣ [Operating System](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Operating%20System%20Resources)   
-    2️⃣ [OOPS, Object Oriented Skills](https://github.com/sumitsojha88/Placement-Preparation/tree/main/OOPS%20Resources)   
-    3️⃣ [DBMS, Databse Management](https://github.com/sumitsojha88/Placement-Preparation/tree/main/DBMS)    
-    4️⃣ [Computer Networking](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Computer%20Network%20Resources)   
-    5️⃣ [System Design](https://github.com/sumitsojha88/Placement-Preparation/tree/main/System%20Design%20Resources)
+    1️⃣ [Operating System](https://github.com/GenieAshwani/Resources/tree/main/Operating%20System%20Resources)   
+    2️⃣ [OOPS, Object Oriented Skills](https://github.com/GenieAshwani/Resources/tree/main/OOPS%20Resources)   
+    3️⃣ [DBMS, Databse Management](https://github.com/GenieAshwani/Resources/tree/main/DBMS)    
+    4️⃣ [Computer Networking](https://github.com/GenieAshwani/Resources/tree/main/Computer%20Network%20Resources)   
+    5️⃣ [System Design](https://github.com/GenieAshwani/Resources/tree/main/System%20Design%20Resources)
   
 </details>
 
@@ -114,7 +114,7 @@ It will be a complete roadmap for your placement prep.
   <summary style="font-size:1.15rem;">Competitive Programming</summary>
 
 - CP needs time, it's not somthing thant you can master in 2 months, We will get comfortable with online platorms and get a taste of competitive programming
-- [Leetcode questions nearly 150-200 questions](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Leetcode%20Solution)
+- [Leetcode questions nearly 150-200 questions](https://github.com/GenieAshwani/Resources/tree/main/Leetcode%20Solution)
   - Category:  
     1️⃣ Easy: 30%  
     2️⃣ Medium: 50%  
@@ -130,13 +130,13 @@ It will be a complete roadmap for your placement prep.
 <details>
   <summary style="font-size:1.15rem;">Misc Stuff</summary>
 
-- [Aptitude/Reasoning](https://github.com/sumitsojha88/Placement-Preparation/tree/main/Aptitude)  
+- [Aptitude/Reasoning](https://github.com/GenieAshwani/Resources/tree/main/Aptitude)  
   1️⃣ Do some mock tests to gain confidence
 - Basic Programming MCQ  
   1️⃣ [C/C++/Java/Python fundamentals](https://www.geeksforgeeks.org/quiz-corner-gq/)  
   2️⃣ Print output type questions  
   3️⃣ Time/space complexity Questions  
-  4️⃣ [SQL Queries](https://github.com/sumitsojha88/Placement-Preparation/tree/main/SQL%20Resources)
+  4️⃣ [SQL Queries](https://github.com/GenieAshwani/Resources/tree/main/SQL%20Resources)
 - [Puzzles](https://www.geeksforgeeks.org/puzzles/)
 - [Always go through 50-60 interview experiences before interview](https://www.geeksforgeeks.org/company-interview-corner/)
 </details>
@@ -145,13 +145,13 @@ It will be a complete roadmap for your placement prep.
 
 ## Best Platforms for training
 
- [![Hackerrank](https://img.shields.io/badge/-hackerrank-7cfc00?style=flat&labelColor=7cfc00&logo=hackerrank&logoColor=white)](https://www.hackerrank.com/)	
- [![InterViewBit](https://img.shields.io/badge/-Interviewbit-87ceeb?style=flat&labelColor=87ceeb&logo=Interviewbit&logoColor=white)](https://www.interviewbit.com/profile/gufqgqbe_e)
-[![LeetCode](https://img.shields.io/badge/-LeetCode-ff8c00?style=flat&labelColor=ff8c00&logo=LeetCode&logoColor=white)](https://leetcode.com/sumitsojha8/)
-[![GeeksforGeeks Badge](https://img.shields.io/badge/-GeeksforGeeks-0F9D58?style=flat-square&logo=GeeksforGeeks&logoColor=white&link=https://auth.geeksforgeeks.org/user/sumitojha2)](https://auth.geeksforgeeks.org/user/sumitojha2)
+ [![Hackerrank](https://img.shields.io/badge/-hackerrank-7cfc00?style=flat&labelColor=7cfc00&logo=hackerrank&logoColor=white)](https://www.hackerrank.com/)
+ [![InterViewBit](https://img.shields.io/badge/-Interviewbit-87ceeb?style=flat&labelColor=87ceeb&logo=Interviewbit&logoColor=white)](https://www.interviewbit.com/)
+[![LeetCode](https://img.shields.io/badge/-LeetCode-ff8c00?style=flat&labelColor=ff8c00&logo=LeetCode&logoColor=white)](https://leetcode.com/)
+[![GeeksforGeeks Badge](https://img.shields.io/badge/-GeeksforGeeks-0F9D58?style=flat-square&logo=GeeksforGeeks&logoColor=white)](https://www.geeksforgeeks.org/)
 [![Codechef](https://img.shields.io/badge/-Codechef-909090?style=flat&labelColor=909090&logo=Codechef&logoColor=white)](https://www.codechef.com/)
-[![CodeForces](https://img.shields.io/badge/-CodeForces-ec6161?style=flat&labelColor=ec6161&logo=CodeForces&logoColor=white)](https://codeforces.com/)	
-[![Hackerearth](https://img.shields.io/badge/hackerearth-purple.svg)](https://www.hackerearth.com/)	
+[![CodeForces](https://img.shields.io/badge/-CodeForces-ec6161?style=flat&labelColor=ec6161&logo=CodeForces&logoColor=white)](https://codeforces.com/)
+[![Hackerearth](https://img.shields.io/badge/hackerearth-purple.svg)](https://www.hackerearth.com/)
 
  
 ## How to contribute
@@ -169,21 +169,9 @@ It will be a complete roadmap for your placement prep.
 6. If you would like to make any positive change to the resources content.
  
 
-##  I Appreciate any feedback
-Constructive criticisms or code reviews of any kind are very much welcome.
-
-If you have any questions about the solutions you can find here, feel free to contact me at: [sumitsojha8@gmail.com](mailto:sumitsojha8@gmail.com?subject=[GitHub]%20CompetitiveProgramming)
-
-
-- 📫 How to reach me: **You can find me also on [Linkedln](https://www.linkedin.com/in/sumitsojha8/)** or 💌Mail me at [sumitsojha8@gmail.com]()
-
-
 # Social Media #
-[![Github Badge](http://img.shields.io/badge/-Github-black?style=flat-square&logo=github&link=https://github.com/sumitsojha88/)](https://github.com/sumitsojha88/) 
-[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/hemanthkollipara/)](https://www.linkedin.com/in/sumitsojha8)
-[![Gmail Badge](https://img.shields.io/badge/-Gmail-d14836?style=flat-square&logo=Gmail&logoColor=white&link=mailto:sumitsojha8@gmail.com)](mailto:sumitsojha8@gmail.com)
-[![GeeksforGeeks Badge](https://img.shields.io/badge/-GeeksforGeeks-0F9D58?style=flat-square&logo=GeeksforGeeks&logoColor=white&link=https://auth.geeksforgeeks.org/user/sumitojha2)](https://auth.geeksforgeeks.org/user/sumitojha2)
-<a href="https://www.instagram.com/sumitsojha8/"><img src="https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white" height=20></a>
+[![Github Badge](http://img.shields.io/badge/-Github-black?style=flat-square&logo=github&link=https://github.com/GenieAshwani/)](https://github.com/GenieAshwani/)
+[![YouTube Badge](https://img.shields.io/badge/-YouTube-red?style=flat-square&logo=youtube&logoColor=white)](https://youtube.com/@genieashwani?si=Y3XcRb9accgk6QBN)
 
 
 ### Credits to respective owners

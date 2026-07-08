@@ -1,13 +1,13 @@
 
 ### Two Pointers
 
-- [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/ "view question")  - [Cpp Solution](https://github.com/sumitsojha88/Placement-Preparation/blob/main/Leetcode%20Solution/Two%20Pointers/Easy/977.%20Squares%20of%20a%20Sorted%20Array.cpp)
-- [Reverse String](https://leetcode.com/problems/reverse-string/ "view question")  - [Cpp Solution](https://github.com/sumitsojha88/Placement-Preparation/blob/main/Leetcode%20Solution/Two%20Pointers/Easy/344.%20Reverse%20String.cpp)
-- [ Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/ "view question") - [Cpp Solution](https://github.com/sumitsojha88/Placement-Preparation/blob/main/Leetcode%20Solution/Two%20Pointers/Easy/349.%20Intersection%20of%20Two%20Arrays.cpp)
-- [Maximum Ascending Subarray Sum](https://leetcode.com/problems/maximum-ascending-subarray-sum/ "view question") - [Cpp Solution](https://github.com/sumitsojha88/Placement-Preparation/new/main/Leetcode%20Solution/Two%20Pointers/Easy)
-- [Move Zeroes](https://leetcode.com/problems/move-zeroes/ "view question") - [Cpp Solution](https://github.com/sumitsojha88/Placement-Preparation/blob/main/Leetcode%20Solution/Two%20Pointers/Easy/283.%20Move%20Zeroes.cpp)
-- [Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/ "view question") - [Cpp Solution](https://github.com/sumitsojha88/Placement-Preparation/blob/main/Leetcode%20Solution/Two%20Pointers/Easy/167.%20Two%20Sum%20II%20-%20Input%20array%20is%20sorted.cpp)
-- [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/ "view question") - [Cpp Solution](https://github.com/sumitsojha88/Placement-Preparation/blob/main/Leetcode%20Solution/Two%20Pointers/Easy/350.%20Intersection%20of%20Two%20Arrays%20II.cpp)
+- [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/ "view question")  - [Cpp Solution](https://github.com/GenieAshwani/Resources/blob/main/Leetcode%20Solution/Two%20Pointers/Easy/977.%20Squares%20of%20a%20Sorted%20Array.cpp)
+- [Reverse String](https://leetcode.com/problems/reverse-string/ "view question")  - [Cpp Solution](https://github.com/GenieAshwani/Resources/blob/main/Leetcode%20Solution/Two%20Pointers/Easy/344.%20Reverse%20String.cpp)
+- [ Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/ "view question") - [Cpp Solution](https://github.com/GenieAshwani/Resources/blob/main/Leetcode%20Solution/Two%20Pointers/Easy/349.%20Intersection%20of%20Two%20Arrays.cpp)
+- [Maximum Ascending Subarray Sum](https://leetcode.com/problems/maximum-ascending-subarray-sum/ "view question") - [Cpp Solution](https://github.com/GenieAshwani/Resources/new/main/Leetcode%20Solution/Two%20Pointers/Easy)
+- [Move Zeroes](https://leetcode.com/problems/move-zeroes/ "view question") - [Cpp Solution](https://github.com/GenieAshwani/Resources/blob/main/Leetcode%20Solution/Two%20Pointers/Easy/283.%20Move%20Zeroes.cpp)
+- [Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/ "view question") - [Cpp Solution](https://github.com/GenieAshwani/Resources/blob/main/Leetcode%20Solution/Two%20Pointers/Easy/167.%20Two%20Sum%20II%20-%20Input%20array%20is%20sorted.cpp)
+- [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/ "view question") - [Cpp Solution](https://github.com/GenieAshwani/Resources/blob/main/Leetcode%20Solution/Two%20Pointers/Easy/350.%20Intersection%20of%20Two%20Arrays%20II.cpp)
 - [Remove Element](https://leetcode.com/problems/remove-element/ "view question") - [Cpp Solution](./solutions/Kadane's%20Algorithm.cpp)
 - [Minimum number of jumps](https://practice.geeksforgeeks.org/problems/minimum-number-of-jumps-1587115620/1# "view question") - [Cpp Solution](./solutions/Minimum%20number%20of%20jumps.cpp)
 - [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/ "view question") - [Cpp Solution](./solutions/Find%20the%20Duplicate%20Number.cpp)

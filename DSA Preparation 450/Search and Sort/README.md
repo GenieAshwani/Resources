@@ -2,7 +2,7 @@
 ### Searching & Sorting
 
 - [First and last occurrences of X](https://practice.geeksforgeeks.org/problems/first-and-last-occurrences-of-x/0# "view question") 
-- [Value equal to index value](https://practice.geeksforgeeks.org/problems/value-equal-to-index-value1330/1# "view question") - [Cpp Solution](https://github.com/sumitsojha88/Placement-Preparation/tree/main/DSA%20Preparation%20450/Search%20and%20Sort)
+- [Value equal to index value](https://practice.geeksforgeeks.org/problems/value-equal-to-index-value1330/1# "view question") - [Cpp Solution](https://github.com/GenieAshwani/Resources/tree/main/DSA%20Preparation%20450/Search%20and%20Sort)
 - [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/ "view question") 
 - [Count Squares](https://practice.geeksforgeeks.org/problems/count-squares3649/1# "view question") 
 - [Square root of an integer](https://www.geeksforgeeks.org/square-root-of-an-integer/ "view topic")
