@@ -1,7 +1,4 @@
 
-## Above questions list was made by [Love Babbar](https://www.youtube.com/watch?v=4iFALQ1ACdA)
-
-
 # DSA Crack Sheet
 
 ## [:star: LevelUp DSA Sheet](https://levelup.codeforsuccess.in/)
