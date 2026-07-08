@@ -172,6 +172,8 @@ It will be a complete roadmap for your placement prep.
 # Social Media #
 [![Github Badge](http://img.shields.io/badge/-Github-black?style=flat-square&logo=github&link=https://github.com/GenieAshwani/)](https://github.com/GenieAshwani/)
 [![YouTube Badge](https://img.shields.io/badge/-YouTube-red?style=flat-square&logo=youtube&logoColor=white)](https://youtube.com/@genieashwani?si=Y3XcRb9accgk6QBN)
+[![Telegram Badge](https://img.shields.io/badge/-Telegram-2CA5E0?style=flat-square&logo=telegram&logoColor=white)](https://t.me/+1mgeTabsRk4zZjQ1)
+[![Instagram Badge](https://img.shields.io/badge/-Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/genie_ashwani/)
 
 
 ### Credits to respective owners
