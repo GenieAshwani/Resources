@@ -15,6 +15,7 @@
  - [NovoResume](https://novoresume.com/) Provide decent free template for resume.
  - [KickResume](https://www.kickresume.com/en/)
  - [Resume.com](https://www.resume.com/)
+ - [JobEmerge](https://www.jobemerge.work) - AI career copilot: job-fit test, 19-language resume translator, Markdown editor. One-time pricing, no auto-renewal.
  - [Cvmaker](https://cvmkr.com/)
  - [CakeResume](https://www.cakeresume.com/)
  - [Canva](https://www.canva.com/resumes/)
